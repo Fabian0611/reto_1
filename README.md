@@ -97,9 +97,24 @@ print("La mayor suma entre elementos consecutivos es:", mayor_suma_consecutiva(l
 
 ````
 ### Quinto Punto
+Escribir una función que reciba una lista de string y retorne unicamente aquellos elementos que tengan los mismos caracteres. e.g. entrada: ["amor", "roma", "perro"], salida ["amor", "roma"]
 
-
-
+Primero se crea la funcion mismos_caracteres donde se crea una lista vacia en la cual se añadiran las palabras que tengan los mismo caracteres, esto se hace con la funcion sorted la cual ordena la palabra en orden alfabetico, es decir que al comparar cada palabra el resultado debe ser el mismo, lo que añadiria esta palabra a la lista vacia, por ultimo se pide la lista de palabras que van a ser analizadas para luego imprimir las palabras que cuentan con los mismos caracteres.
 ````python
+def mismos_caracteres(lista):
+    resultado = []
+    for palabra in lista:
+        if sorted(palabra) == sorted(lista[0]):
+            resultado.append(palabra)
+    return resultado
+
+# Se solicita la lista de palabras
+
+palabras = input("Introduce una lista de palabras separadas por espacios: ")
+lista_palabras = palabras.split()
+
+# Llama a la función y muestra las palabras con los mismos caracteres
+
+print("Palabras con los mismos caracteres:", mismos_caracteres(lista_palabras))
 
 ````
