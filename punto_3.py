@@ -12,7 +12,7 @@ def filtrar_primos(lista):
 # Solicita la lista de números al usuario
 
 numeros = input("Introduce una lista de números separados por espacios: ")
-lista_numeros = [int(x) for x in numeros.split(" ")]
+lista_numeros = [int(x) for x in numeros.split()]
 
 # Llama a la función y muestra los números primos
 
