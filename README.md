@@ -74,6 +74,29 @@ lista_numeros = [int(x) for x in numeros.split()]
 print("Números primos:", filtrar_primos(lista_numeros))
 ````
 ### Cuarto Punto
+Escribir una función que reciba una lista de números enteros y retorne la mayor suma entre dos elementos consecutivos.
+
+Primero se crea la funcion mayor_suma_consecutiva la cual toma los valores de lista que sean consecutivos y los va sumando y comparando hasta terminar con el mayor valor, luego se pide la lista de numeros que va a ser analizada para al final imprimir el valor de la mayor suma entre numeros consecutivos.
+````python
+def mayor_suma_consecutiva(lista):
+    max_suma = float('-inf')
+    for i in range(len(lista) - 1):
+        suma_actual = lista[i] + lista[i + 1]
+        if suma_actual > max_suma:
+            max_suma = suma_actual
+    return max_suma
+
+# Se solicita la lista de números
+
+numeros = input("Introduce una lista de números separados por espacios: ")
+lista_numeros = [int(x) for x in numeros.split()]
+
+# Llama a la función y muestra la mayor suma consecutiva
+
+print("La mayor suma entre elementos consecutivos es:", mayor_suma_consecutiva(lista_numeros))
+
+````
+### Quinto Punto
 
 
 
